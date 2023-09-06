@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Said Ali" />
+        <title>Animated hamburger button</title>
+        <link rel="stylesheet" href="css/styles.css" />
+        <script src="js/script.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <button
+                data-hamburger-button
+                aria-controls="primary-nav"
+                aria-expanded="false"
+            >
+                <span class="hamburger"></span>
+            </button>
+            <nav>
+                <ul id="primary-navigation" data-menu data-visible="false">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </nav>
+        </header>
+    </body>
+</html>

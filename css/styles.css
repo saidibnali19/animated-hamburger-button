@@ -1,0 +1,54 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    padding: 1.25rem 0.75rem;
+    border: 0;
+    background-color: hsl(0, 0%, 75%);
+}
+
+.hamburger {
+    position: relative;
+    display: block;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    width: 2rem;
+    height: 3px;
+    background-color: hsl(0 0% 0%);
+    transition: transform 350ms ease-in-out, opacity 200ms linear;
+}
+
+.hamburger::before,
+.hamburger::after {
+    left: 0;
+    content: "";
+    position: absolute;
+}
+
+.hamburger::before {
+    bottom: 6px;
+}
+
+.hamburger::after {
+    top: 6px;
+}
+
+[aria-expanded="true"] .hamburger {
+    transform: rotate(45deg);
+}
+
+[aria-expanded="true"] .hamburger::before {
+    opacity: 0;
+}
+
+[aria-expanded="true"] .hamburger::after {
+    transform: rotate(90deg) translate(-6px);
+}
